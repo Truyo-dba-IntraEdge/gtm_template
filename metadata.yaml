@@ -15,5 +15,5 @@
 homepage: "https://www.truyo.com"
 documentation: "https://truyo.com/solutions/consent-preference-management/"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
+  - sha: 80a37ade4be929052acbaf03d9f861affc1ddb63
     changeNotes: Initial Version
