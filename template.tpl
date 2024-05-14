@@ -10,7 +10,7 @@ ___INFO___
 
 {
   "type": "TAG",
-  "id": "cvt_temp_public_id",
+  "id": "Truyo",
   "version": 1,
   "securityGroups": [],
   "displayName": "Truyo CMP",
@@ -215,10 +215,11 @@ const localStorage = require('localStorage');
 const fromBase64 = require('fromBase64');
 const processGoogleConsent = data.processGoogleConsent;
 const cookiePluginSRC = data.cookiePluginSRC;
+const encodeUri = require('encodeUri');
 
 const LOCAL_ITEM_NAME = 'truyoConsentOptOut';
 
-const url = cookiePluginSRC;
+const url = encodeUri(cookiePluginSRC);
 
 // If the URL input by the user matches the permissions set for the template
 if (queryPermission('inject_script', url)) {
