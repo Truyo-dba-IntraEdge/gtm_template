@@ -1,11 +1,3 @@
-___TERMS_OF_SERVICE___
-
-By creating or modifying this file you agree to Google Tag Manager's Community
-Template Gallery Developer Terms of Service available at
-https://developers.google.com/tag-manager/gallery-tos (or such other URL as
-Google may provide), as modified from time to time.
-
-
 ___INFO___
 
 {
@@ -215,10 +207,11 @@ const localStorage = require('localStorage');
 const fromBase64 = require('fromBase64');
 const processGoogleConsent = data.processGoogleConsent;
 const cookiePluginSRC = data.cookiePluginSRC;
+const encodeUri = require('encodeUri');
 
 const LOCAL_ITEM_NAME = 'truyoConsentOptOut';
 
-const url = cookiePluginSRC;
+const url = encodeUri(cookiePluginSRC);
 
 // If the URL input by the user matches the permissions set for the template
 if (queryPermission('inject_script', url)) {
@@ -227,7 +220,7 @@ if (queryPermission('inject_script', url)) {
     logToConsole('Truyo Loaded with Consent');
   } else {
     injectScript(url, data.gtmOnSuccess(), data.gtmOnFailure);
-    logToConsole('Truyo Loaded with No Consent');
+    logToConsole('Truyo Loaded without Consent');
   }
 }
 
