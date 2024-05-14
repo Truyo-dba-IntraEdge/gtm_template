@@ -15,5 +15,5 @@
 homepage: "https://www.truyo.com"
 documentation: "https://truyo.com/solutions/consent-preference-management/"
 versions:
-  - sha: 80a37ade4be929052acbaf03d9f861affc1ddb63
-    changeNotes: Initial Version
+  - sha: 0409a6b6df6cc5205cffb22228e3b365dd7950a1
+    changeNotes: Added encodeURI API
